@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-icon">📚</div>
+            <h1>Student Attendance Tracker</h1>
+            <p class="header-subtitle">Stay on top of your academic progress</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Add Subject Section -->
+        <section class="add-subject-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="subjectName" 
+                    placeholder="Enter subject name..."
+                    class="subject-input"
+                >
+                <button onclick="addSubject()" class="add-btn">
+                    <span class="btn-icon">+</span>
+                    Add Subject
+                </button>
+            </div>
+        </section>
+
+        <!-- Statistics Overview -->
+        <section class="stats-overview" id="statsOverview">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <h3 id="totalSubjects">0</h3>
+                    <p>Total Subjects</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <h3 id="totalAttended">0</h3>
+                    <p>Classes Attended</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">❌</div>
+                <div class="stat-content">
+                    <h3 id="totalMissed">0</h3>
+                    <p>Classes Missed</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <h3 id="overallPercentage">0%</h3>
+                    <p>Overall Attendance</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subjects Grid -->
+        <section class="subjects-section">
+            <div class="section-header">
+                <h2>Your Subjects</h2>
+                <button onclick="resetData()" class="reset-btn">
+                    <span class="btn-icon">🗑️</span>
+                    Reset All
+                </button>
+            </div>
+            <div class="subjects-grid" id="subjectsGrid">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📝</div>
+                    <h3>No subjects added yet</h3>
+                    <p>Add your first subject to start tracking attendance</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Attendance Overview</h2>
+            </div>
+            <div class="chart-container">
+                <canvas id="attendanceChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <div class="modal-icon">⚠️</div>
+            <h3>Confirm Reset</h3>
+            <p>Are you sure you want to reset all attendance data? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="btn-secondary">Cancel</button>
+                <button onclick="confirmReset()" class="btn-danger">Reset All Data</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
