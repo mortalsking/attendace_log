@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    width: 100%;
+    max-width: 600px;
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-subject-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#subject-name-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#add-subject-btn, #reset-btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-left: 10px;
+}
+
+#add-subject-btn {
+    background-color: #007bff;
+}
+
+#reset-btn {
+    background-color: #dc3545;
+}
+
+#add-subject-btn:hover, #reset-btn:hover {
+    transform: translateY(-2px);
+}
+
+#add-subject-btn:hover {
+    background-color: #0056b3;
+}
+
+#reset-btn:hover {
+    background-color: #c82333;
+}
+
+.subjects-list .subject {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.subject-info {
+    display: flex;
+    align-items: center;
+}
+
+.subject-name {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.attendance-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.attendance-controls .present-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.attendance-controls .absent-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.attendance-controls .delete-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.attendance-percentage {
+    font-weight: bold;
+}
+
+.overall-attendance-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+}
+
+.overall-attendance-container h2 {
+    margin-top: 0;
+}
+
+#overall-attendance-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 10px auto 0;
+    background-color: #ccc;
+}
+
+.indicator.green {
+    background-color: #28a745;
+}
+
+.indicator.yellow {
+    background-color: #ffc107;
+}
+
+.indicator.red {
+    background-color: #dc3545;
+}

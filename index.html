@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Attendance Tracker</h1>
+        </header>
+        <main>
+            <div class="add-subject-container">
+                <input type="text" id="subject-name-input" placeholder="Enter Subject Name">
+                <button id="add-subject-btn">Add Subject</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+            <div id="subjects-list" class="subjects-list"></div>
+            <div class="overall-attendance-container">
+                <h2>Overall Attendance</h2>
+                <div id="overall-attendance-display">-</div>
+                <div id="overall-indicator" class="indicator"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
